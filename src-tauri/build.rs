@@ -1,15 +1,15 @@
 fn main() {
   cc::Build::new()
-    .include("mhycrypto")
+    .include("vendor/mhycrypto")
     .cpp(true)
-    .file("mhycrypto/memecrypto.cpp")
-    .file("mhycrypto/metadata.cpp")
-    .file("mhycrypto/metadatastringdec.cpp")
+    .file("vendor/mhycrypto/memecrypto.cpp")
+    .file("vendor/mhycrypto/metadata.cpp")
+    .file("vendor/mhycrypto/metadatastringdec.cpp")
     .compile("mhycrypto");
 
   cc::Build::new()
-    .include("mhycrypto")
-    .file("mhycrypto/aes.c")
+    .include("vendor/mhycrypto")
+    .file("vendor/mhycrypto/aes.c")
     .compile("mhycrypto-aes");
 
   tauri_build::build()

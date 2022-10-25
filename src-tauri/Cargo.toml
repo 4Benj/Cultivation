@@ -59,6 +59,9 @@ rcgen = { version = "0.9", features = ["x509-parser"] }
 # metadata stuff
 regex = "1"
 
+# userassembly stuff
+keystone = { path = "./vendor/keystone/bindings/rust"}
+
 # other
 file_diff = "1.0.0"
 rust-ini = "0.18.0"
