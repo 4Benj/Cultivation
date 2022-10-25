@@ -23,6 +23,7 @@ mod file_helpers;
 mod gamebanana;
 mod lang;
 mod metadata_patcher;
+mod userassembly_patcher;
 mod proxy;
 mod system_helpers;
 mod unzip;
@@ -120,7 +121,8 @@ fn main() {
         gamebanana::get_download_links,
         gamebanana::list_submissions,
         gamebanana::list_mods,
-        metadata_patcher::patch_metadata
+        metadata_patcher::patch_metadata,
+        userassembly_patcher::patch_userassembly
       ])
       .run(tauri::generate_context!())
       .expect("error while running tauri application");
