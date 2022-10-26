@@ -100,10 +100,10 @@ fn replace_keys(data: &[u8]) -> Vec<u8> {
 
       if i == 2 {
         println!("Replacing password key");
-        new_data = replace_rsa_key(&data_str, key, "passwordKey.txt");
+        new_data = replace_rsa_key(&data_str, key, "metadata_passwordKey.txt");
       } else if i == 3 {
         println!("Replacing dispatch key");
-        new_data = replace_rsa_key(&new_data, key, "dispatchKey.txt");
+        new_data = replace_rsa_key(&new_data, key, "modified_dispatchKey.txt");
       }
     }
   }
