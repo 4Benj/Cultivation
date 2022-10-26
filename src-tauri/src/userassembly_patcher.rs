@@ -50,7 +50,7 @@ fn assemble_key(key: String) -> Vec<u8> {
 
   //println!("code:\n{}", code);
 
-  let engine = match Keystone::new(Arch::X86, Mode::MODE_32) {
+  let engine = match Keystone::new(Arch::X86, Mode::MODE_64) {
     Ok(engine) => engine,
     Err(err) => panic!("Could not initialize Keystone engine: {}", err),
   };
